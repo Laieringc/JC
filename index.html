@@ -1,93 +1,65 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>JC</title>
+<head>
+    <meta charset="UTF-8">
+    <title>JC</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+    <link rel="import" href="sections/conf.html">
+    <link rel="import" href="sections/gountedit.html">
+</head>
 
-		<link rel="stylesheet" href="styles/style.css">
-		<!--<link rel="stylesheet" href="styles/theme-default.css">-->
-	</head>
-	<body>
-		    <script>
+<body>
+    <header id="header">
+        <hgroup>
+            <h1 class="site_title"><a href="index.html">测试</a></h1>
+            <h2 class="section_title"><a>配置</a></h2>
+        </hgroup>
+    </header>
+    <!-- end of header bar -->
 
-$(function() {
-	    	const ipc = require('electron').ipcRenderer
+    <section id="secondary_bar">
+        <div class="user">
+            <p>当前在线机台 (<a href="#">3 台</a>)</p>
+        </div>
+        <div class="breadcrumbs_container">
+            <article class="breadcrumbs"><a href="index.html">全部</a>
+                <div class="breadcrumb_divider"></div> <a class="current">Fab1</a></article>
+        </div>
+    </section>
+    <!-- end of secondary bar -->
 
-const errorBtn = document.getElementById('sss')
-errorBtn.addEventListener('click', function (event) {
-  ipc.send('open-error-dialog')
-})
-}
+    <aside id="sidebar" class="column">
+        <form class="quick_search">
+            <input type="text" value="快速查找机台：">
+        </form>
+        <hr/>
+        <h3>用户</h3>
+        <ul class="user">
+            <li class="icn_user"><a href="#">Admin</a></li>
+            <li class="icn_user"><a href="#">OP</a></li>
+        </ul>
+        <h3>管理组</h3>
+        <ul class="admin">
+            <li class="icn_admin"><a href="#">Fab1</a></li>
+            <li class="icn_admin"><a href="#">Fab2</a></li>
+            <li class="icn_admin"><a href="#">Fab3</a></li>
+        </ul>
+
+        <footer>
+
+        </footer>
+    </aside>
+    <!-- end of sidebar -->
+
+    <section id="main" class="column">
+
+
+    </section>
+    <script type="text/javascript">
+      require('./renderer-process/main/r-main')
     </script>
-	<header id="header">
-		<hgroup>
-			<h1 class="site_title"><a href="index.html">测试</a></h1>
-			<h2 class="section_title"><a>配置</a></h2>
-		</hgroup>
-	</header> <!-- end of header bar -->
-	
-	<section id="secondary_bar">
-		<div class="user">
-			<p>当前在线机台 (<a href="#">3 台</a>)</p>
-		</div>
-		<div class="breadcrumbs_container">
-			<article class="breadcrumbs"><a href="index.html">全部</a> <div class="breadcrumb_divider"></div> <a class="current">Fab1</a></article>
-		</div>
-	</section><!-- end of secondary bar -->
-	
-	<aside id="sidebar" class="column">
-		<form class="quick_search">
-			<input type="text" value="快速查找机台：" >
-		</form>
-		<hr/>
-		<h3>用户</h3>
-		<ul class="user">
-			<li class="icn_user"><a href="#">Admin</a></li>
-			<li class="icn_user"><a href="#">OP</a></li>
-		</ul>
-		<h3>管理组</h3>
-		<ul class="admin">
-			<li class="icn_admin"><a href="#">Fab1</a></li>
-			<li class="icn_admin"><a href="#">Fab2</a></li>
-			<li class="icn_admin"><a href="#">Fab3</a></li>
-		</ul>
-		
-		<footer>
-			
-		</footer>
-	</aside><!-- end of sidebar -->
-	
-	<section id="main" class="column">
-		<article class="module width_full">
-			<header><h3>Stats</h3></header>
-			<div class="pclist">
-		    <div class="pc" id="sss">ssss</div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			<div class="pc"><a class="icon iconfont">&#xe655;</a></div>
-			</div>
-			
-		</ul>
-			</div>
-		</article><!-- end of stats article -->
-		
-	</section>
-	</body>
+</body>
 
 </html>

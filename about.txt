@@ -1,0 +1,1 @@
+ /usr/local/lib/node_modules/electron-prebuilt/dist/Electron.app/Contents/MacOS/Electron  /Users/Laiering/开发/JC
